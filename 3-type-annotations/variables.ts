@@ -37,3 +37,19 @@ const printNum: (i: number) => void = (i: number) => {
 const json = '{"x": 10, "y": 20}';
 const coordinates: { x: number; y: number} = JSON.parse(json);
 console.log(coordinates);
+
+// 2) when variables are declared on one line to be intialized later
+let words = ['red', 'green', 'blue'];
+let foundWord: boolean; // would typically set to false
+
+words.forEach((word) => {
+  if (word === 'green') foundWord = true;
+});
+
+// 3) variable whose type cannot be inferred correctly
+let numbers = [-10, -1, 12];
+let numberAboveZero: boolean | number = false; // multiple types ok
+
+numbers.forEach((num) => {
+  if (num > 0) numberAboveZero = num;
+});
