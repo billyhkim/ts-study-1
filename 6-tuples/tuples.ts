@@ -11,4 +11,3 @@ type Drink = [string, boolean, number];
 // tuple is created by types by order of elements
 const ramune: [string, boolean, number] = ['Clear', true, 30];
 const coffee: Drink = ['Brown', false, 0];
-
