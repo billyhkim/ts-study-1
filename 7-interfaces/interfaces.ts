@@ -1,4 +1,10 @@
 // interface = new type describing property names and value types of obj
+interface Vehicle {
+  name: string;
+  year: number;
+  broken: boolean;
+}
+
 const oldCivic = {
   name: 'Civic',
   year: 2000,
