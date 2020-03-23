@@ -19,5 +19,8 @@
   "homepage": "https://github.com/billyhkim/typescript-study#readme",
   "dependencies": {
     "axios": "^0.19.2"
+  },
+  "devDependencies": {
+    "typescript": "^3.8.3"
   }
 }
