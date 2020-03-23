@@ -19,6 +19,7 @@
   "homepage": "https://github.com/billyhkim/typescript-study#readme",
   "dependencies": {
     "@types/faker": "^4.1.10",
+    "@types/googlemaps": "^3.39.3",
     "axios": "^0.19.2",
     "faker": "^4.1.0"
   },
