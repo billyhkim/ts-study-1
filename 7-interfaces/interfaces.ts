@@ -1,20 +1,33 @@
 // interface = new type describing property names and value types of obj
-interface Vehicle {
-  name: string;
-  year: number;
-  broken: boolean;
+interface Reportable {
+  summary(): string;
 }
 
 const oldCivic = {
   name: 'Civic',
   year: 2000,
   broken: true,
+  summary(): string {
+    return `Name: ${this.name}`;
+  }
 };
 
-const printVehicle = (vehicle: { name: string; year: number; broken: boolean; }): void => {
-  console.log(`Name: ${vehicle.name}`);
-  console.log(`Year: ${vehicle.year}`);
-  console.log(`Broken: ${vehicle.broken}`);
+const printSummary = (item: Reportable): void => {
+  console.log(item.summary());
 };
 
-printVehicle(oldCivic);
+printSummary(oldCivic);
+
+const drink = {
+  color: 'Clear',
+  carbonated: true,
+  sugar: 40,
+  summary(): string {
+    return `My drink has ${this.sugar} grams of sugar.`
+  }
+};
+
+printSummary(drink);
+
+// 1. create functions that accept args typed with interfaces
+// 2. objs/classes can implement a given interface to work with function
