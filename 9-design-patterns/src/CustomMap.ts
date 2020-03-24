@@ -8,6 +8,7 @@ interface MapItem {
     lat: number;
     lng: number;
   };
+  markerContent(): string;
 }
 
 export class CustomMap {
@@ -24,12 +25,20 @@ export class CustomMap {
   }
 
   addMarker(mapItem: MapItem): void {
-    new google.maps.Marker({
+    const marker = new google.maps.Marker({
       map: this.googleMap,
       position: {
         lat: mapItem.location.lat,
         lng: mapItem.location.lng,
       },
+    });
+
+    marker.addListener('click', () => {
+      const infoWindow = new google.maps.InfoWindow({
+        content: mapItem.markerContent(),
+      });
+
+      infoWindow.open(this.googleMap, marker);
     });
   }
 }
