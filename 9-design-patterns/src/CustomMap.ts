@@ -3,12 +3,13 @@
 // import { Company } from "./Company";
 
 // instructions to every other class on hwo they can be an argument to 'addMarker'
-interface MapItem {
+export interface MapItem {
   location: {
     lat: number;
     lng: number;
   };
   markerContent(): string;
+  color: string;
 }
 
 export class CustomMap {
