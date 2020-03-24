@@ -2,7 +2,7 @@
 // import { User } from "./User";
 // import { Company } from "./Company";
 
-// instructions to every other class on hwo they can be an argument to 'addMarker'
+// instructions to every other class on how they can be an argument to 'addMarker'
 export interface MapItem {
   location: {
     lat: number;
@@ -13,6 +13,7 @@ export interface MapItem {
 }
 
 export class CustomMap {
+  // private means this property can only be accessed inside this class
   private googleMap: google.maps.Map;
 
   constructor(divId: string) {
