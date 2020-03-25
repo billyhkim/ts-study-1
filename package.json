@@ -4,7 +4,9 @@
   "description": "Studying Typescript",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "sort:build": "tsc -watch --project 10-sort/tsconfig.json",
+    "sort:run": "nodemon 10-sort/build/index.js",
+    "sort": "concurrently npm:sort:*"
   },
   "repository": {
     "type": "git",
@@ -21,6 +23,7 @@
     "@types/faker": "^4.1.10",
     "@types/googlemaps": "^3.39.3",
     "axios": "^0.19.2",
+    "concurrently": "^5.1.0",
     "faker": "^4.1.0"
   },
   "devDependencies": {
