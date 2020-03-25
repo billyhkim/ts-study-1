@@ -4,13 +4,13 @@ var NumbersCollection = /** @class */ (function () {
     function NumbersCollection(data) {
         this.data = data;
     }
-    NumbersCollection.prototype.compare = function (left, right) {
-        return this.data[left] > this.data[right];
+    NumbersCollection.prototype.compare = function (leftIndex, rightIndex) {
+        return this.data[leftIndex] > this.data[rightIndex];
     };
-    NumbersCollection.prototype.swap = function (left, right) {
-        var leftVal = this.data[left];
-        this.data[left] = this.data[right];
-        this.data[right] = leftVal;
+    NumbersCollection.prototype.swap = function (leftIndex, rightIndex) {
+        var leftVal = this.data[leftIndex];
+        this.data[leftIndex] = this.data[rightIndex];
+        this.data[rightIndex] = leftVal;
     };
     Object.defineProperty(NumbersCollection.prototype, "length", {
         get: function () {
