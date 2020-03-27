@@ -1,4 +1,6 @@
-// interfaces are helpful because they setup contracts between classes
+// interfaces are helpful because they (1) setup contracts between classes, (2) used when different objs work together, (3) promotes loose coupling--good for dissimilar objs
+// inheritance/abstract classes (1) setup contracts between classes, (2) used when trying to build up a definition of an obj, (3) strongly couples classes--good for similar classes
+
 interface Sortable {
   length: number;
   compare(leftIndex: number, rightIndex: number): boolean;
